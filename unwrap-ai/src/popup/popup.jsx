@@ -141,7 +141,7 @@ function Popup() {
             </div>
 
             <footer className="popup-footer">
-                <a href="https://github.com/xcqtnr/unwrap-ai" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/xcqtnr/unwrap" target="_blank" rel="noopener noreferrer">
                     Open Source
                 </a>
             </footer>
