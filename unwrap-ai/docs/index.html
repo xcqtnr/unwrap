@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unwrap AI - Stop renting what you can own</title>
+    <meta name="description"
+        content="Chrome extension that finds free alternatives to overpriced AI tools. Stop paying for GPT wrappers.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="hero">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="8" width="18" height="13" rx="2"></rect>
+                    <path d="M12 8V3"></path>
+                    <path d="M8 3h8"></path>
+                    <path d="M12 12v5"></path>
+                    <path d="M9 15h6"></path>
+                </svg>
+                <span>Unwrap AI</span>
+            </div>
+            <nav>
+                <a href="https://github.com/xcqtnr/unwrap-ai-db" target="_blank">Database</a>
+                <a href="https://github.com/xcqtnr/unwrap" target="_blank">GitHub</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="headline">
+                <h1>They added a logo. You added a subscription.</h1>
+                <p class="subtitle">Stop funding someone else's API bill. <br>We show you the free alternatives and the
+                    exact prompts to use them.</p>
+                <div class="cta-group">
+                    <a href="#install" class="btn-primary">Install Extension</a>
+                    <a href="https://github.com/xcqtnr/unwrap-ai-db" class="btn-secondary" target="_blank">View
+                        Database</a>
+                </div>
+                <!-- Simple two-panel showcase -->
+                <div class="showcase">
+                    <!-- Left: What you see on a wrapper site -->
+                    <div class="showcase-panel">
+                        <div class="showcase-label">When you visit a wrapper site</div>
+                        <div class="showcase-card-wrapper">
+                            <!-- Doodle annotation: Warning -->
+                            <div class="doodle doodle-warning">
+                                <svg class="doodle-arrow" viewBox="0 0 60 30" fill="none">
+                                    <path d="M5 25 Q30 5, 55 15" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" fill="none" />
+                                    <path d="M50 10 L55 15 L48 18" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                </svg>
+                                <span class="doodle-text">Cost alert!</span>
+                            </div>
+                            <!-- Doodle annotation: Free option -->
+                            <div class="doodle doodle-free">
+                                <span class="doodle-text">Click to switch</span>
+                                <svg class="doodle-arrow" viewBox="0 0 60 30" fill="none">
+                                    <path d="M55 25 Q30 5, 5 15" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" fill="none" />
+                                    <path d="M10 10 L5 15 L12 18" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                </svg>
+                            </div>
+                            <div class="showcase-card">
+                                <div class="showcase-header">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="1.5">
+                                        <rect x="3" y="8" width="18" height="13" rx="2"></rect>
+                                        <path d="M12 8V3"></path>
+                                        <path d="M8 3h8"></path>
+                                        <path d="M12 12v5"></path>
+                                        <path d="M9 15h6"></path>
+                                    </svg>
+                                    <span>Unwrap AI</span>
+                                </div>
+                                <div class="showcase-warning">
+                                    💡 This service costs <strong>$20/mo</strong>
+                                </div>
+                                <div class="showcase-info">
+                                    <div class="showcase-row"><span>Site</span><span>ChatPDF</span></div>
+                                    <div class="showcase-row"><span>May use</span><span class="accent">GPT-4</span>
+                                    </div>
+                                    <div class="showcase-row"><span>Free option</span><span class="link">NotebookLM
+                                            →</span>
+                                    </div>
+                                    <div class="showcase-row"><span>Confidence</span><span>95%</span></div>
+                                </div>
+                                <div class="showcase-prompt">
+                                    <div class="showcase-prompt-label">Suggested prompt</div>
+                                    <div class="showcase-prompt-text">I'm uploading a PDF. Please summarize the key
+                                        points...</div>
+                                </div>
+                                <div class="showcase-actions">
+                                    <button class="showcase-btn primary">Copy prompt</button>
+                                    <button class="showcase-btn secondary">Try free option</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Your stats in the popup -->
+                    <div class="showcase-panel">
+                        <div class="showcase-label">Track your savings</div>
+                        <div class="showcase-card-wrapper">
+                            <!-- Doodle annotation: Savings -->
+                            <div class="doodle doodle-savings">
+                                <span class="doodle-text">Money saved!</span>
+                                <svg class="doodle-arrow" viewBox="0 0 60 30" fill="none">
+                                    <path d="M55 5 Q30 15, 10 25" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" fill="none" />
+                                    <path d="M15 20 L10 25 L18 26" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                                </svg>
+                            </div>
+                            <div class="showcase-card demo-popup">
+                                <header class="demo-popup-header">
+                                    <div class="demo-popup-logo">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                            stroke-linejoin="round">
+                                            <rect x="3" y="8" width="18" height="13" rx="2"></rect>
+                                            <path d="M12 8V3"></path>
+                                            <path d="M8 3h8"></path>
+                                            <path d="M12 12v5"></path>
+                                            <path d="M9 15h6"></path>
+                                        </svg>
+                                        <span class="demo-popup-title">Unwrap AI</span>
+                                    </div>
+                                    <span class="demo-popup-version">v1.0</span>
+                                </header>
+                                <p class="demo-popup-tagline">Discover free alternatives to AI tools</p>
+                                <div class="demo-stats-grid">
+                                    <div class="demo-stat-card demo-stat-primary">
+                                        <div class="demo-stat-icon">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path>
+                                                <path d="M12 6v2m0 8v2"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="demo-stat-content">
+                                            <div class="demo-stat-value">$60</div>
+                                            <div class="demo-stat-label">Saved</div>
+                                        </div>
+                                    </div>
+                                    <div class="demo-stat-row">
+                                        <div class="demo-stat-card demo-stat-small">
+                                            <div class="demo-stat-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="1.5">
+                                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="demo-stat-content">
+                                                <div class="demo-stat-value">3</div>
+                                                <div class="demo-stat-label">Sites shown</div>
+                                            </div>
+                                        </div>
+                                        <div class="demo-stat-card demo-stat-small">
+                                            <div class="demo-stat-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                                    stroke="currentColor" stroke-width="1.5">
+                                                    <path
+                                                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
+                                                    </path>
+                                                    <polyline points="14 2 14 8 20 8"></polyline>
+                                                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                                                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                                                </svg>
+                                            </div>
+                                            <div class="demo-stat-content">
+                                                <div class="demo-stat-value">1</div>
+                                                <div class="demo-stat-label">Copied</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="demo-popup-info">
+                                    <div class="demo-info-row">
+                                        <span class="demo-info-label">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                            </svg>
+                                            Database
+                                        </span>
+                                        <span class="demo-info-value">7 sites</span>
+                                    </div>
+                                    <div class="demo-info-row">
+                                        <span class="demo-info-label">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                                stroke="currentColor" stroke-width="1.5">
+                                                <polyline points="23 4 23 10 17 10"></polyline>
+                                                <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                                            </svg>
+                                            Updated
+                                        </span>
+                                        <span class="demo-info-value">Jan 5, 12:00 PM</span>
+                                    </div>
+                                </div>
+                                <div class="demo-popup-actions">
+                                    <button class="demo-popup-btn">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z">
+                                            </path>
+                                        </svg>
+                                        View database
+                                    </button>
+                                    <button class="demo-popup-btn demo-popup-btn-outline">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+                                            stroke="currentColor" stroke-width="1.5">
+                                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                                            <line x1="4" y1="22" x2="4" y2="15"></line>
+                                        </svg>
+                                        Suggest a site
+                                    </button>
+                                </div>
+                                <footer class="demo-popup-footer">
+                                    <span>Open Source</span>
+                                </footer>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+            <section class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </svg>
+                    </div>
+                    <h3>Detects Wrappers</h3>
+                    <p>Automatically identifies sites that may be charging for AI capabilities available elsewhere for
+                        free.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 18h6"></path>
+                            <path d="M10 22h4"></path>
+                            <path d="M12 2a7 7 0 0 0-4 12.7V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.3A7 7 0 0 0 12 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Shows Alternatives</h3>
+                    <p>Suggests free tools like ChatGPT, Claude, or NotebookLM that offer similar functionality.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3>Provides Prompts</h3>
+                    <p>Gives you the exact prompts to replicate the paid service's functionality for free.</p>
+                </div>
+            </section>
+
+            <section class="how-it-works" id="install">
+                <h2>How it works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <p>Install the Chrome extension</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <p>Browse the web normally</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <p>Get notified when a free alternative exists</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <p>Copy the prompt and use it on the free service</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats">
+                <div class="stat">
+                    <span class="stat-value">7+</span>
+                    <span class="stat-label">Sites tracked</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">$0</span>
+                    <span class="stat-label">Cost to use</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Open source</span>
+                </div>
+            </section>
+
+            <section class="contribute">
+                <h2>Community-powered</h2>
+                <p>Know a site that should be on our list? The database is open source and community-driven.</p>
+                <a href="https://github.com/xcqtnr/unwrap-ai-db/issues/new?template=suggest-site.yml"
+                    class="btn-secondary" target="_blank">Suggest a site →</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>Made with cynicism by <a href="https://github.com/xcqtnr" target="_blank">xcqtnr</a></p>
+            <p class="tagline">Stop paying the middleman tax.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

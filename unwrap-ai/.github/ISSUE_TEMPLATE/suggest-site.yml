@@ -1,0 +1,121 @@
+name: "🆕 Suggest a Site"
+description: "Help us document AI wrapper sites"
+title: "[Site] "
+labels: ["suggestion", "needs-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a site that charges for AI capabilities available elsewhere for free? Submit it here.
+
+  - type: input
+    id: domain
+    attributes:
+      label: Site Domain
+      description: "The website URL of the service"
+      placeholder: "example.com"
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Site Name
+      description: "The official name of the service"
+      placeholder: "ChatPDF"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: "What type of service is this?"
+      options:
+        - PDF Analysis
+        - Writing Assistant
+        - Image Generation
+        - Code Assistant
+        - Research / RAG
+        - Chatbot
+        - Voice / TTS
+        - Translation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: base_model
+    attributes:
+      label: Base Model (if known)
+      description: "What AI model powers this service?"
+      placeholder: "GPT-4, Claude, etc."
+    validations:
+      required: false
+
+  - type: input
+    id: price_text
+    attributes:
+      label: Price
+      description: "How much does this service cost?"
+      placeholder: "$20/month"
+    validations:
+      required: true
+
+  - type: input
+    id: alternative_name
+    attributes:
+      label: Free Alternative Name
+      description: "What free service provides similar functionality?"
+      placeholder: "NotebookLM, ChatGPT, Claude"
+    validations:
+      required: true
+
+  - type: input
+    id: alternative_url
+    attributes:
+      label: Free Alternative URL
+      description: "Link to the free alternative"
+      placeholder: "https://notebooklm.google.com"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why is this a good alternative?
+      description: "Explain how users can achieve the same functionality"
+      placeholder: "NotebookLM offers free PDF analysis with AI-powered Q&A..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: system_prompt
+    attributes:
+      label: Suggested Prompt
+      description: "A prompt users can copy to replicate the functionality"
+      placeholder: "I'm uploading a PDF. Please summarize the key points and answer my questions about it."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: confidence
+    attributes:
+      label: Confidence Level
+      description: "How confident are you this is a wrapper service?"
+      options:
+        - "High — Verified the underlying model"
+        - "Medium — Strong indicators"
+        - "Low — Needs more research"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Confirmation
+      options:
+        - label: "This is a real service I've encountered"
+          required: true
+        - label: "I understand this is community-sourced information"
+          required: true

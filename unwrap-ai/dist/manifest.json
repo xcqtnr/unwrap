@@ -1,0 +1,58 @@
+{
+  "manifest_version": 3,
+  "name": "Unwrap AI",
+  "version": "1.0.0",
+  "description": "Stop renting what you can own. Exposes AI wrappers and shows you the free alternative.",
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content.jsx-loader-CUec4tnn.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_idle",
+      "css": [
+        "assets/content-Bh6khirB.css"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "public/icons/icon16.png",
+      "32": "public/icons/icon32.png",
+      "48": "public/icons/icon48.png",
+      "128": "public/icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "32": "public/icons/icon32.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "assets/Icons-B6ZeBUnl.js",
+        "assets/content.jsx-Dol2O9nr.js"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
