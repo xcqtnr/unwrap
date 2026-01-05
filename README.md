@@ -2,7 +2,7 @@
 
 **Stop renting what you can own.**
 
-🌐 **[Visit the Website →](https://xcqtnr.github.io/unwrap/unwrap-ai/docs/)**
+🌐 **[Visit the Website →](https://xcqtnr.github.io/unwrap/)**
 
 ## The Problem
 
