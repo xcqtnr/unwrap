@@ -1,16 +1,48 @@
-# React + Vite
+# Unwrap AI Extension - Developer Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This directory contains the source code for the Unwrap AI Chrome extension.
 
-Currently, two official plugins are available:
+## 🛠️ Setup & Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+- Node.js (v18+)
+- npm or pnpm
 
-## React Compiler
+### Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+2. Run the development build (watch mode):
+   ```bash
+   npm run build:watch
+   ```
+   This will compile the extension to the `dist/` folder and watch for file changes.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Loading in Chrome
+
+1. Open Chrome and go to `chrome://extensions/`
+2. Enable **Developer mode** (top right toggle)
+3. Click **Load unpacked**
+4. Select the `dist` folder inside this directory (`unwrap-ai/dist`)
+
+You can now use the extension! If you make changes to the code, the build script will automatically update the `dist` folder. You may need to click the refresh icon on the extension card in `chrome://extensions/` to see changes.
+
+## 🏗️ Project Structure
+
+- **`src/`** - Main source code (React app)
+- **`src/background/`** - Service worker (background logic)
+- **`src/content/`** - Content scripts (injected into webpages)
+- **`manifest.json`** - Extension configuration
+
+## 📦 Building for Production
+
+To create a production-ready build:
+
+```bash
+npm run build
+```
+
+Then zip the contents of the `dist/` folder to publish to the Chrome Web Store.
